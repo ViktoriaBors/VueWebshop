@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import DetailsView from "../views/DetailsView.vue"
 import ProductsView from "../views/ProductsView.vue"
 
+
 const routes = [
   {
     path: '/',
@@ -20,7 +21,7 @@ const routes = [
     name: 'details',
     component : DetailsView,
     props: true
-  }
+  },
 ]
 
 const router = createRouter({
