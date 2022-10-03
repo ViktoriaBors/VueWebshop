@@ -57,7 +57,7 @@ export default {
     justify-content: space-between;
   }
 .card-header{
-  height: 250px;
+  height: 200px;
   width:100%;
 }
 .card-img-top {

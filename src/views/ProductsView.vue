@@ -3,9 +3,10 @@
     <div>
       <div class="mb-3 container-sm">
         <label class="form-label fw-bold fs-5" for="search">Search by name</label>
+        <p>Be aware of letter case</p>
         <input
           type="text"
-          class="form-control text-lowercase"
+          class="form-control"
           aria-describedby="search"
           v-model="search"
         />
@@ -37,7 +38,7 @@
 <script>
 import getProducts from "../composables/getProducts.js";
 import ProductCards from "../components/ProductCards.vue";
-import { onBeforeUnmount, ref, } from "vue";
+import {  ref, } from "vue";
 
 export default {
   components: {
@@ -50,6 +51,8 @@ export default {
     const category = ref("");
     const search = ref("");
     const { products, error, loadData } = getProducts();
+
+    console.log(loadData())
     
     return { products, error, showProducts, search, category, loadData };
   },
